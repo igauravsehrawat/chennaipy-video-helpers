@@ -48,6 +48,7 @@ This repository contains helper scripts and commands to create meetup videos for
         $ sox cleaned.wav final.wav trim 00:02 =21:20
 
 * Trim the video if required
+
         $ ffmpeg -i <input_video_name> -ss <start_time_in_hh:mm:sec> -to <end_time_in_hh:mm:sec> <output_video_name>
 
 * Generate a `concatvideos` file to be used by ffmpeg to join the videos to form a single one
