@@ -62,9 +62,17 @@ This repository contains helper scripts and commands to create meetup videos for
 
         $ ffmpeg -i joined.mp4 -i final.wav -shortest -preset ultrafast -q 0 final.mp4
 
+* Managing volume in the video
+
+        $ ffmpeg -i <input_video_name> -af 'volume=2.5<or 1x>' <output_video_name>
+
 * scale video to 16:9
 
         $ ffmpeg -i final.mp4 -vf pad="ih*16/9:ih:(ow-iw)/2:(oh-ih)/2" -preset ultrafast -acodec copy final2.mp4
+
+    or specify absolute pixels
+
+        $ ffmpeg -i <input_video_name> -vf "scale=1024:768" <output_video_name>
 
 * Generate the title image
 
