@@ -64,7 +64,7 @@ This repository contains helper scripts and commands to create meetup videos for
 
 * Managing volume in the video
 
-        $ ffmpeg -i <input_video_name> -af 'volume=2.5<or 1x>' <output_video_name>
+        $ ffmpeg -i <input_video_name> -af 'volume=2.5<or 1x>' -preset ultrafast <output_video_name>
 
 * scale video to 16:9
 
@@ -72,7 +72,7 @@ This repository contains helper scripts and commands to create meetup videos for
 
     or specify absolute pixels
 
-        $ ffmpeg -i <input_video_name> -vf "scale=1024:768" <output_video_name>
+        $ ffmpeg -i <input_video_name> -vf "scale=1024:768" -preset ultrafast <output_video_name>
 
 * Generate the title image
 
