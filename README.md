@@ -91,4 +91,4 @@ This repository contains helper scripts and commands to create meetup videos for
 
         $ ffmpeg -i title.mp4 -i final2.mp4 -filter_complex "[0:0] [0:1] [1:0] [1:1] concat=n=2:v=1:a=1 [v] [a]" -map "[v]" -map "[a]"  uploadable.mp4
 
-    P.S: if you aren't worried about file size & want to avoid 100% cpu core utilization, you can add `-preset ultrafast` to speed up the processing
+    Note: if you aren't worried about file size & want to avoid 100% all cpu core utilization, you can add `-preset ultrafast` to speed up the processing
