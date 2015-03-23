@@ -49,7 +49,7 @@ This repository contains helper scripts and commands to create meetup videos for
 
 * Trim the video if required
 
-        $ ffmpeg -i <input_video_name> -ss <start_time_in_hh:mm:sec> -to <end_time_in_hh:mm:sec> <output_video_name>
+        $ ffmpeg -ss <start_time_in_hh:mm:sec> -i <input_video_name>  -t <time_duration_in_hh:mm:sec> <output_video_name>
 
 * Generate a `concatvideos` file to be used by ffmpeg to join the videos to form a single one
 
@@ -73,7 +73,7 @@ This repository contains helper scripts and commands to create meetup videos for
 
     or specify absolute pixels
 
-        $ ffmpeg -i <input_video_name> -vf "scale=1024:768" -preset ultrafast <output_video_name>
+        $ ffmpeg -i <input_video_name> -vf "scale=<specify_width_in_px:specify_length_in_px>" -preset ultrafast <output_video_name>
 
 * Generate the title image
 
